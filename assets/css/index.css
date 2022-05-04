@@ -1,0 +1,306 @@
+:root{
+    --primary-ad-color: #b11313;
+    --black-ad-color: #000000;
+    --white-ad-color: #ffffff;
+    --blue-color:#114c92;
+}
+
+#hero{
+    /* background-image: url("../img/img1.png"); */
+    background-color: var(--primary-ad-color);
+    background: linear-gradient(#000000, #b11313);
+    height: 870px;
+    
+}
+div.image-home{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+div.image-home div{
+    width: 80%;
+    position: absolute;
+    right: 0%;
+    height: 100%;
+
+}
+div.image-home-2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+div.image-home img{
+    width: 80%;
+    object-fit: right;
+    object-position: left;
+    position: absolute;
+    right: 0%;
+}
+div.image-home-2 img{
+    width: 40%;
+    object-fit: cover;
+    object-position: left;
+    position: absolute;
+    z-index: 222;
+    right: 0%;
+}
+
+.titre{
+    margin-bottom: 50px;
+}
+.titre span{
+    opacity: 0;
+    transition: all 1s ease;
+}
+span.fade{
+    opacity: 1;
+}
+
+#lesspiderman{
+    background-color: var(--primary-ad-color);
+}
+#lesspiderman h1{
+    font-size: 35px;
+}
+.cta{
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+.button1{
+    background-color: var(--white-ad-color);
+    color: var(--primary-ad-color);
+    border-radius: 40px;
+    border: 2px solid transparent;
+    padding: 15px 20px;
+}
+.cta .button2{
+    border: var(--white-ad-color) 2px solid;
+    color: var(--white-ad-color);
+    border-radius: 40px;
+    padding: 15px 20px;
+}
+
+.card-text{
+    text-align: justify;
+    height: 0;
+    overflow: hidden;
+}
+.animation_image{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+/* .card-unique{
+    width: 30%;
+    margin-right: auto;
+} */
+.card-unique ul{
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+#spiderman{
+    color: var(--white-ad-color);
+    background-color: var(--blue-color);
+    height: 550px;
+    /* background-image: url("../img/img5.png"); */
+    background-position: center left;
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+}
+
+img.image_scroll_suivant{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    top: 0;
+
+}
+
+h1{
+    font-family: 'far_from_homecomingregular';
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+#spiderman{
+    position: relative;
+}
+#spiderman .pop-box-1{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    left: 50%;
+    bottom: 0;
+    width: 80%;
+    height: 95%;
+    transform: translate(-200%,-50%);
+    background-color: #000000;
+    box-sizing: border-box;
+    border: 8px solid var(--white-ad-color);
+    border-radius: 10px;
+    text-align: justify;
+    background-color: #114c92;
+    transition: 0.5s;
+    z-index: 999;
+
+
+}
+#spiderman .pop-box-1 button{
+    position: absolute;
+
+}
+#spiderman .pop-box-1 .texte{
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+}
+#spiderman .pop-box-1 h1{
+    text-align: right;
+    padding: 10px;
+}
+#spiderman .pop-box-1 h2{
+    text-align: left;
+    padding: 10px auto;
+}
+#spiderman form{
+    display: flex;
+    flex-direction: column;
+}
+#spiderman form input{
+    color: #000000;
+}
+
+#spiderman .spiderman-formulaire .form-spiderman, input[type=submit]{
+    width: 375px;
+    border-radius: 30px;
+    color: var(--white-ad-color);
+    border-color: var(--white-ad-color);
+    padding: 5px;
+    margin: 10px auto;
+    z-index: 13;
+}
+#spiderman form .form-spiderman{
+    color: #000000;
+}
+input[type=submit]{
+    width: 200px;
+    background-color: transparent;
+    border: 2px solid var(--white-ad-color);
+    padding: 10px 20px;
+}
+
+#newsletter{
+    background-color: var(--primary-ad-color);
+    height: 550px;
+    background-image: url("../img/img6.png");
+    background-position: center right;
+    background-size: 700px;
+    background-repeat: no-repeat;
+    padding: 20px 0;
+    position: relative;
+}
+#newsletter .pop-box-2{
+    position: absolute;
+    color: #ffffff;
+    top: 50%;
+    right: 0%;
+    left: 50%;
+    bottom: 0;
+    width: 80%;
+    height: 95%;
+    transform: translate(-200%,-50%);
+    background-color: #000000;
+    box-sizing: border-box;
+    border: 8px solid var(--white-ad-color);
+    border-radius: 10px;
+    text-align: justify;
+    background-color: var(--primary-ad-color);
+    transition: 0.5s;
+    z-index: 999;
+
+
+}
+#newsletter .pop-box-2 button{
+    position: absolute;
+
+}
+#newsletter .pop-box-2 .texte{
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+}
+#newsletter .pop-box-2 h1{
+    text-align: right;
+    padding: 10px;
+}
+#newsletter .pop-box-2 h2{
+    text-align: left;
+    padding: 10px auto;
+}
+
+.newsletter-formulaire{
+    margin-top: 70px;
+}
+
+.newsletter-formulaire input[type=text],.newsletter-formulaire input[type=email]{
+    border-radius: 20px;
+    width: 400px;
+    margin-bottom: 30px;
+    padding: 5px 10px;
+    background-color: #ffffff00;
+    border-color: white;
+}
+::placeholder{
+    color: white;
+}
+
+.newsletter-formulaire input[type=submit]{
+    background-color: white;
+    color: #000000;
+}
+footer .media i{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: var(--primary-ad-color);
+    margin: 0 4px;
+    font-size: 1.5rem;
+    padding-top: 8px;
+    color: var(--black-ad-color);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+/* les classes ajoutées pour animations */
+.button1_animation{
+    background-color: var(--primary-ad-color);
+    color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 5px var(--white-ad-color);
+    transition: .3s;
+    font-weight: bold;
+
+}
+.button2_animation{
+    font-weight: bold;
+    background-color: var(--white-ad-color);
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px 5px var(--white-ad-color);
+
+}
+.button3_animation{
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px 5px var(--white-ad-color);
+
+}
+.button4_animation{
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px 5px var(--white-ad-color);
+
+}
