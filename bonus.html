@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="./assets/fontawesome-free-5.15.2-web/css/all.css"> -->
+    <link rel="stylesheet" href="./assets/css/adversaires.css">
+    <link rel="stylesheet" href="./assets/css/bonus.css">
+    <script src="./assets/jquery-3.6.0.js"></script>
+    <title>Spiderman - Bonus</title>
+</head>
+<body>
+    <header id="header-top">
+        <nav>
+            <div class="conteneur navigbar">
+                <div class="brand">
+                    <a href="bonus.html">
+                        <img src="./assets/logo/logo1.png" alt="">
+                        <img src="./assets/logo/logo2.png" alt="">
+                        <img src="./assets/logo/logo3.png" alt="">
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Accueil</a><span></span></li>
+                        <li><a href="adversaires.html">Adversaires</a><span></span></li>
+                        <li><a href="heros.html">Héros</a><span></span></li>
+                        <li><a href="apropos.html">A propos</a><span></span></li>
+                        <li><a href="bonus.html">Bonus</a><span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" >
+            <div class="conteneur">
+                <div class="brand-mobile">
+                    <a href="index.html">
+                        <img src="./assets/logo/logo1.png" width="15%" alt="">
+                        <img src="./assets/logo/logo2.png" width="10%" alt="">
+                        <img src="./assets/logo/logo3.png" width="60%" alt="">
+                    </a>
+                    <div><i class="fa-solid fa-ellipsis fa-2x"></i></div>
+                </div>
+            </div>
+
+            <div class="compte_rebours" style="position:absolute;top: 50%;right: 0%;transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.6); font-size: 3rem;padding: 10px;border: 2px solid black;box-sizing: border-box;">
+                <h1 class="compte_rebours_content"></h1>
+                <h1 class="compte_rebours_notification"></h1>
+
+            </div>
+            
+            <div class="conteneur box">
+                <h1 class="titre">UN HEROS</h1>
+                <p class="description">"Coming Soon..."</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="conteneur footer">
+            <div class="navigation-footer">
+                <ul class="list1">
+                    <li><a href="#">Mobile app</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+                <div class="brand">
+                    <a href="#">
+                        <img src="./assets/logo/logo1.png" alt="">
+                        <img src="./assets/logo/logo2.png" alt="">
+                        <img src="./assets/logo/logo3.png" alt="">
+                    </a>
+                </div>
+                <ul class="list2">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><select class="formselect">
+                        <option selected="">Langue</option>
+                        <option>Francais</option>
+                        <option>Anglais</option>
+                        <option>Espagnol</option>
+                        <option>Creole</option>
+                        </select></li>
+                </ul>
+            </div>
+            <div class="media">
+                <!-- <img src="./assets/logo/logof.png" alt="">
+                <img src="./assets/logo/logoi.png" alt="">
+                <img src="./assets/logo/logot.png" alt="">
+                <img src="./assets/logo/logoy.png" alt=""> -->
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="copyright">
+                <p>&copy;SaynaXMarvel, Inc 2022. We love our users</p>
+            </div>
+        </div>
+    </footer>
+    <script src="animation.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            
+
+            let timer = 0;
+            compte_a_rebours();
+
+        });
+
+        function compte_a_rebours(){
+
+            timer = setInterval(() => {
+                let date_debut = new Date().getTime();
+                let date_fin = new Date("May 5, 2022");
+                let date_termine = date_fin.setHours(8,0);
+
+                const distance_heure = date_termine - date_debut;
+
+                let jours = Math.floor(distance_heure / (1000 * 60 * 60 * 24));
+                let heures = Math.floor((distance_heure % (1000* 60 * 60 * 24)) / (1000*60*60));
+                let minutes = Math.floor((distance_heure % (1000*60*60)) / (1000 * 60));
+                let secondes = Math.floor((distance_heure % (1000*60)) / (1000));
+
+                $(".compte_rebours_content").html(`${jours} J : ${heures} H : ${minutes} M : ${secondes} S `)
+
+                if(jours == 0 && heures == 0 && minutes == 0 && secondes == 0)
+                {
+                    temps_ecoule();
+                }
+                
+
+            }, 1000);
+
+
+        }
+
+        function temps_ecoule(){
+            clearInterval(timer);
+            $(".compte_rebours_notification").html("TEMPS ECOULE");
+
+        }
+
+    </script>
+</body>
+</html>
